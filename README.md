@@ -29,7 +29,7 @@ Efetuar um estudo sobre as linguagens de marcação mais comuns existentes, incl
 Será necessário um estudo aprofundado sobre o Markdown: o que é, para que serve, sua sintaxe e toda a sua estrutura. Este estudo será relacionado diretamente com este guia, uma vez que todos os acompanhamentos serão realizados através da documentação feita em cima desta tecnologia.
 
 #### Tarefa
-Criar um ```README.md``` e documentar os estudos, sem um padrão estabelecido para instigar a criação de um padrão de estudo, porém o estudo precisa estar sucinto e íntegro, uma vez que servirá de referência eventuais consultas.
+Criar um ```README.md``` e documentar os estudos, sem um padrão estabelecido para instigar a criação de um padrão de estudo, porém o estudo precisa estar sucinto e íntegro, uma vez que servirá de referência para eventuais consultas.
 
 Referências para os estudos:
 - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
