@@ -39,6 +39,7 @@ O Git se tornou essencial em qualquer empresa que mantém uma filosofia DevOps e
 > É importante criar um repositório de testes, diferente do *fork* que foi feito, para aplicar os estudos e ter um melhor entendimento do comportamento de cada comando estudado.
 
 **Referências**   
+- https://github.com/DanielHe4rt/git4noobs
 - https://education.github.com/git-cheat-sheet-education.pdf
 - https://training.github.com/downloads/github-git-cheat-sheet.pdf
 - [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/)
