@@ -31,7 +31,7 @@ O Git se tornou essencial em qualquer empresa que mantém uma filosofia DevOps e
 - Criar uma conta no GitHub
 - Fazer um fork deste repositório
 - Criar o diretório Git e um ```README.md``` e documentar os estudos
-    - Quais são os sistemas de repositório mais comuns 
+    - Quais são os sistemas de versionamento mais comuns 
     - Quais os objetos do git
     - Como o git identifica alterações
     - Listar e descrever os comandos do git
@@ -56,3 +56,7 @@ Criar um ```README.md``` e documentar os estudos, sem um padrão estabelecido pa
 - https://guides.github.com/features/mastering-markdown/
 
 ### 3. HTML5
+
+**Referências**
+- https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element
+- https://www.w3schools.com/tags/default.asp
