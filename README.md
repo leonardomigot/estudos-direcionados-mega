@@ -29,8 +29,12 @@ O Git se tornou essencial em qualquer empresa que mantém uma filosofia DevOps e
 
 **Tarefa**   
 - Criar uma conta no GitHub
-- Fazer um fork deste
+- Fazer um fork deste repositório
 - Criar o diretório Git e um ```README.md``` e documentar os estudos
+    - Quais são os sistemas de repositório mais comuns 
+    - Quais os objetos do git
+    - Como o git identifica alterações
+    - Listar e descrever os comandos do git
 
 > É importante criar um repositório de testes, diferente do *fork* que foi feito, para aplicar os estudos e ter um melhor entendimento do comportamento de cada comando estudado.
 
