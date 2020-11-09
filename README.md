@@ -56,7 +56,16 @@ Criar um ```README.md``` e documentar os estudos, sem um padrão estabelecido pa
 - https://guides.github.com/features/mastering-markdown/
 
 ### 3. HTML5
+Tratando de universo web, não há como não falar de HTML5. Ao navegar na internet, sem o HTML não seria uma experiência muito agradável. 
+
+**Tarefa**
+- Criar um ```README.md``` e documentar todas as tags do HTML5 apenas
+- Após o estudo dos elementos, documentar todos os atributos (apenas suportadas no HTML5)
+
+Exemplo a ser seguido para cada elemento/tag:
+![exemplo documentação](_assets_/padrao_html.png)
 
 **Referências**
 - https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element
 - https://www.w3schools.com/tags/default.asp
+- https://www.w3schools.com/tags/ref_attributes.asp
