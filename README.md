@@ -8,6 +8,8 @@ A proposta deste guia de estudos direcionados é definir uma metodologia onde os
 ```
 estudos-direcionados
 ├── README.md
+├── CSS/
+│   └── README.md
 ├── Git/
 │   └── README.md
 ├── HTML5/
@@ -22,7 +24,10 @@ As tecnologias deste guia, serão divididas em segmentos, onde cada tecnologia s
 1. Git e Github
 2. Markdown
 3. HTML5
-4. ```em breve```
+4. CSS3
+5. Javascript
+6. Protocolo HTTP
+7. ```em breve```
 
 ### 1. Git e Github
 O Git se tornou essencial em qualquer empresa que mantém uma filosofia DevOps e gerenciamento de projeto, pois é um componente chave para o sucesso do trabalho em equipe. 
@@ -69,3 +74,18 @@ Exemplo a ser seguido para cada elemento/tag:
 - https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element
 - https://www.w3schools.com/tags/default.asp
 - https://www.w3schools.com/tags/ref_attributes.asp
+
+### 4. CSS3
+Pensando de forma simplista e metaforando, o HTML5 seria o esqueleto de um site/aplicação web, agora com o CSS, poderemos estilizar (criar pele e características) para o esqueleto.
+
+**Tarefa**
+- Criar um ```README.md``` e documentar:
+  - O que é CSS?
+  - Como referenciar dentro do HTML
+  - Qual sua sintaxe?
+  - Documentar as [propriedades](https://www.w3schools.com/cssref/default.asp)
+  - Documentar os [seletores](https://www.w3schools.com/cssref/css_selectors.asp)
+  - Documentar as [funções](https://www.w3schools.com/cssref/css_functions.asp)
+
+Exemplo a ser seguido para o css:
+![exemplo documentação](_assets_/padrao_css.png)
