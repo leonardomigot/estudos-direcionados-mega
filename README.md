@@ -89,3 +89,6 @@ Pensando de forma simplista e metaforando, o HTML5 seria o esqueleto de um site/
 
 Exemplo a ser seguido para o css:
 ![exemplo documentação](_assets_/padrao_css.png)
+
+**Materiais Complementares**
+- https://www.30secondsofcode.org/css/p/1
