@@ -1,56 +1,94 @@
-/** {font-family: Roboto;}*/
-
-body {
+* {
     margin: 0;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSBYNY0ebOJ7CMfqfIe1YMs-316p109ItMVA&usqp=CAU);
+    padding: 0; 
+    list-style: none;
     font-family: "Segoe UI";
 }
 
-.limiter {
-    max-width: 960px;
-    height: auto;
-    margin: auto;
-    /*background-color: silver;*/
+#body {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Navigation */
+/* 
+    #navigator 
+*/
 
-.navigation { 
-    height: 90px;
-    width: auto;
-    margin: 0px 10px;
-    
-    /*overflow: hidden;*/
-}
-
-.navigation a {
-    float: right;
+#navigator {   
+    display:flex;
+    background-color: rgb(50, 50, 50);
+    color: whitesmoke;
     text-align: center;
-    margin: 25px 5px;
-    width: auto;
-    padding: 10px 20px;
+    max-width: 1080px;
+    margin: auto;
+    
 }
 
-.navigation a:not(.navigation a:first-child):hover { /* Botões hover, exceto o primeiro */
-    background-color: whitesmoke;
-    border-radius: 5px;
+#navigator li {
+    padding: 20px 30px;
 }
 
-.navigation a:first-child { /* Primeiro para esquerda */
-    float: left;
+#navigator li:first-child {
+    text-align: left;
 }
 
-/* Cover */
+#navigator li:hover:not(#navigator li:nth-child(1)){
+    background-color:rgb(27, 27, 27);
+}
 
-.cover_image {
-    background-image: url(https://www.honeywell.com/content/dam/honeywellbt/en/images/horizontal/Buildings.jpg);
-    background-position: center;
+#navigator li:nth-child(1) {
+    flex-grow: 1;
+}
+
+/*
+    #cover_img
+*/
+
+#cover_img {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA_UElQzxuVFT63CPbr8kJv1fwLq_XpVsGnQ&usqp=CAU);
     background-size: cover;
-    height: 110px;
-    max-width: 960px;
+    height: 250px;
+    max-width: 1080px;
+    margin: auto;    
 }
 
-/* Content */
+/*
+    text
+*/
+
+#container{
+    /*max-width: 1080px;*/
+    /*margin: auto;*/
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+}
+
+#main_text {
+    padding: 20px 40px;
+    flex-grow: 1;
+
+}
+
+#lateral {
+    margin: 20px 0;
+    padding: 20px 40px;
+    width: 120px;
+    background-color: rgb(15, 89, 160);
+}
+
+#footer {
+    background-color: gray;
+    display: flex;
+    flex-grow: 1;
+
+}
+
+
+
+
+
+
 
 
 
