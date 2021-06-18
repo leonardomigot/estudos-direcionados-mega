@@ -1,0 +1,56 @@
+/** {font-family: Roboto;}*/
+
+body {
+    margin: 0;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSBYNY0ebOJ7CMfqfIe1YMs-316p109ItMVA&usqp=CAU);
+    font-family: "Segoe UI";
+}
+
+.limiter {
+    max-width: 960px;
+    height: auto;
+    margin: auto;
+    /*background-color: silver;*/
+}
+
+/* Navigation */
+
+.navigation { 
+    height: 90px;
+    width: auto;
+    margin: 0px 10px;
+    
+    /*overflow: hidden;*/
+}
+
+.navigation a {
+    float: right;
+    text-align: center;
+    margin: 25px 5px;
+    width: auto;
+    padding: 10px 20px;
+}
+
+.navigation a:not(.navigation a:first-child):hover { /* Botões hover, exceto o primeiro */
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.navigation a:first-child { /* Primeiro para esquerda */
+    float: left;
+}
+
+/* Cover */
+
+.cover_image {
+    background-image: url(https://www.honeywell.com/content/dam/honeywellbt/en/images/horizontal/Buildings.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 110px;
+    max-width: 960px;
+}
+
+/* Content */
+
+
+
