@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+a {
+    font-family: Arial;
+    font-size: 13px;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li {
+    list-style: none; 
+    padding: 0 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+#body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#search {
+    outline: unset;
+    border: 1px solid silver;
+    height: 40px;
+    width: 400px;
+    padding: 0 25px;    
+    border-radius: 20px;
+    margin: 0 20px;  
+}
+
+.item {
+    height: 70px; 
+    width: 70px; 
+    background-color: silver;
+    margin: 5px;
+    border-radius: 10px;
+}

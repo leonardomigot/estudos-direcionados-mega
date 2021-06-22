@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+}
+
+#body {
+    height: 100%;
+}
+
+#main_container {
+    height: 100%;
+}
+
+#content {
+    width: 100%;  
+}
