@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    margin: 0 50px; /* media query */
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#menu li {
+    margin: 0 10px;
+}
+
+#cover {
+    height: 110px;
+    width: 100%;
+    background-image: url(https://wecorporate.com.my/wp-content/uploads/2020/01/Sdn-Bhd-pic.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#content {    
+    display: flex;
+    flex-direction: row;
+}
+
+#main {
+    padding: 50px 50px; /* media query */
+    min-width: 300px;
+}
+
+#main h2 {
+    
+    font-weight: lighter;
+    font-size: 32px;   
+}
+
+#aside {
+    background-color: #0f59a0;
+    color:white;
+    font-size: 14px;
+    margin: 30px 0; /* media query */
+    padding: 20px 20px;
+    max-width: 200px;
+}
+
+
+
+
+
+
+
+

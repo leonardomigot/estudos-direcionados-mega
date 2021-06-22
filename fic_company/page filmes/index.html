@@ -7,21 +7,35 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="containers.css">
+    <link rel="stylesheet" href="lista.css">
 </head>
 <body>
     <div id=container>
         <div id="menu">            
-            <a href="/">Filmes</a>
+            <a href="index.html" class="botao">Filmes</a>
         </div>
 
         <div id="content">
             <div id="header">
-                <input type="submit" value="+" id="botao">
+                <button class="botao" id="button"><p>+</p></button>
             </div>
-            <div id=
+
+            <!--Início do item-->
+            <div id="list">               
+                <ul id="entire_section">
+                    <li><input type="checkbox" name="" id="checkbox"></li>                    
+                    <li id="movie_name">Nome do Filme</li>
+                    <ul id="movie_more">
+                        <li id="wanted">Relevância</li>
+                        <li class="movie_specs">Data</li>
+                        <li class="movie_specs">Temporadas</li>
+                    </ul> 
+                </ul>
+            </div>
+            <!--Fim do item-->
         </div>
-
-
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>

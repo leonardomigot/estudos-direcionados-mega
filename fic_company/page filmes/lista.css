@@ -1,0 +1,39 @@
+/* Lista */
+
+#list {
+    list-style: none;
+}
+
+#list ul {
+    padding: 0;
+}
+
+#list ul li{
+    display: inline;
+}
+
+#entire_section {
+    margin: 30px 30px 50px 30px;
+}
+
+#movie_name {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#movie_more {
+    margin: 5px 0 0 20px;
+}
+
+#wanted {
+    font-weight: bold;
+    color: green;
+    padding: 0 10px;
+}
+
+.movie_specs {
+    color:gray;
+    padding: 0 10px;
+}
+
+
