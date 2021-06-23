@@ -43,13 +43,18 @@ table tr th {
     flex-grow: 1;
 }
 
-#filmes {
+.filmes {
     font-family: Arial;
-    font-size: 40px;    
+    font-size: 30px;    
     color: white;
+    border: none;
+    padding: 20px 0;   
+    width: 200px; 
+    background-color: black;
+    cursor: pointer;
 }
 
-#filmes:hover {
+.filmes:hover {
     background-color: brown;
     box-sizing:border-box;    
 }

@@ -12,12 +12,15 @@
 <body>
     <div id=container>
         <div id="menu">            
-            <a href="index.html" id="filmes">Filmes</a>
+            <button class="filmes" id="click_filmes">Filmes</button>
+            <button class="filmes" id="click_load_all">load-db</button>
+            <button class="filmes" id="click_remove_all">remove</button>
+            <button class="filmes" id="click_visible">visible</button>
         </div>
 
         <div id="content">
             <div id="header">
-                <button class="botao" id="button2"><p>X</p></button>
+                <button class="botao" id="button2"><img src="./resources/delete.png" alt="" style="height: 25px; margin: 12px;"></button>
                 <button class="botao" id="button"><p>+</p></button>
                 
             </div>
@@ -25,7 +28,7 @@
             <!--Início do item-->
             <div id="list">
                 <template id="productrow">
-                    <table id="entire_section">
+                    <table class="entire_section">
                         <tr>
                             <th>
                                 <input type="checkbox" name="" class="checkbox">

@@ -13,9 +13,10 @@
     display: inline;
 }
 
-#entire_section {
+.entire_section {
     margin: 30px 30px 30px 30px;
     padding-right: 30px;
+    display: block;
 }
 
 .checkbox {
@@ -37,5 +38,6 @@
     color:gray;
     padding: 0 10px;
 }
+
 
 
