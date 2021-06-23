@@ -2,18 +2,24 @@
 
 #list {
     list-style: none;
+    display: inline;
 }
 
-#list ul {
-    padding: 0;
-}
+/*#list table {
+    padding: initial;
+}*/
 
 #list ul li{
     display: inline;
 }
 
 #entire_section {
-    margin: 30px 30px 50px 30px;
+    margin: 30px 30px 30px 30px;
+    padding-right: 30px;
+}
+
+.checkbox {
+    margin-right: 10px;
 }
 
 #movie_name {
@@ -21,14 +27,10 @@
     font-size: 22px;
 }
 
-#movie_more {
-    margin: 5px 0 0 20px;
-}
-
 #wanted {
     font-weight: bold;
     color: green;
-    padding: 0 10px;
+    padding-right: 0 10px;
 }
 
 .movie_specs {

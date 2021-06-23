@@ -12,27 +12,43 @@
 <body>
     <div id=container>
         <div id="menu">            
-            <a href="index.html" class="botao">Filmes</a>
+            <a href="index.html" id="filmes">Filmes</a>
         </div>
 
         <div id="content">
             <div id="header">
+                <button class="botao" id="button2"><p>X</p></button>
                 <button class="botao" id="button"><p>+</p></button>
+                
             </div>
 
             <!--Início do item-->
-            <div id="list">               
-                <ul id="entire_section">
-                    <li><input type="checkbox" name="" id="checkbox"></li>                    
-                    <li id="movie_name">Nome do Filme</li>
-                    <ul id="movie_more">
-                        <li id="wanted">Relevância</li>
-                        <li class="movie_specs">Data</li>
-                        <li class="movie_specs">Temporadas</li>
-                    </ul> 
-                </ul>
+            <div id="list">
+                <template id="productrow">
+                    <table id="entire_section">
+                        <tr>
+                            <th>
+                                <input type="checkbox" name="" class="checkbox">
+                            </th>
+                            <th>
+                                <p id="movie_name">Nome do Filme</p>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p></p>
+                            </th>
+                            <th >
+                                <p id="wanted">Relevância</p>   
+                                <p id="date" class="movie_specs">Data<p>
+                                <p id="season" class="movie_specs">Temporadas</p>
+                            </th>
+                        </tr>                    
+                    </table>
+                </template>       
             </div>
             <!--Fim do item-->
+ 
         </div>
     </div>
 
