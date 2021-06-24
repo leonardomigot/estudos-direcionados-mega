@@ -19,20 +19,24 @@ document.getElementById("button").onclick = function() { // botao ADD
 
 document.getElementById("button2").onclick = function() { // botao DELETE
     var deletev = prompt("Delete", "ID");
-    //localStorage.removeItem(deletev);
-    //populateDb();
 
-    for(var x=deletev; x<(localStorage.length); x++){
+    for(var x=deletev; x<(localStorage.length-1); x++){
 
-        localStorage.setItem(x) = localStorage.getItem(x+1);
+       
+        
+        var nextItem = parseInt(x) + 1;
 
-        //console.log(x + " e " + parseInt(x+1));
-
+        
+        var temp = localStorage.getItem(nextItem);
+        
+        
+        localStorage.setItem(x, temp); 
     } 
 
-    // no final é remove();
 
-    console.log(localStorage.getItem(deletev));
+    localStorage.removeItem(localStorage.length-1);
+
+  
 
     loadPageItems();
 }
@@ -156,25 +160,41 @@ function populateDb() {
 
     localStorage.setItem(
         "0", 
-        '{"title":"bugs", ' +
-        '"rating":"80", ' +
-        '"year":"2015", ' +
-        '"seasons":"2"}'
+        '{"title":"zero", ' +
+        '"rating":"0", ' +
+        '"year":"0", ' +
+        '"seasons":"0"}'
     );
 
     localStorage.setItem(
         "1", 
-        '{"title":"second", ' +
-        '"rating":"50", ' +
-        '"year":"2008", ' +
-        '"seasons":"6"}'
+        '{"title":"one", ' +
+        '"rating":"1", ' +
+        '"year":"1", ' +
+        '"seasons":"1"}'
     );
 
     localStorage.setItem(
         "2", 
-        '{"title":"thir", ' +
-        '"rating":"5ss", ' +
-        '"year":"2002", ' +
+        '{"title":"two", ' +
+        '"rating":"2", ' +
+        '"year":"2", ' +
+        '"seasons":"2"}'
+    );
+
+    localStorage.setItem(
+        "3", 
+        '{"title":"three", ' +
+        '"rating":"3", ' +
+        '"year":"3", ' +
+        '"seasons":"3"}'
+    );
+
+    localStorage.setItem(
+        "4", 
+        '{"title":"four", ' +
+        '"rating":"4", ' +
+        '"year":"4", ' +
         '"seasons":"4"}'
     );
 
