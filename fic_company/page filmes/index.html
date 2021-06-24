@@ -12,10 +12,11 @@
 <body>
     <div id=container>
         <div id="menu">            
-            <button class="filmes" id="click_filmes">Filmes</button>
+            <button class="filmes" id="click_filmes">home page</button>
             <button class="filmes" id="click_load_all">load-db</button>
             <button class="filmes" id="click_remove_all">remove</button>
-            <button class="filmes" id="click_visible">visible</button>
+            <button class="filmes" id="click_div_vis">toogle div</button>
+            <button class="filmes" id="click_add_vis">toogle add div</button>
         </div>
 
         <div id="content">
@@ -26,7 +27,7 @@
             </div>
 
             <!--Início do item-->
-            <div id="list">
+            <div class="list" id="lista1">
                 <template id="productrow">
                     <table class="entire_section">
                         <tr>
@@ -38,7 +39,7 @@
                             </th>
                         </tr>
                         <tr>
-                            <th>
+                            <th class="identification">
                                 <p></p>
                             </th>
                             <th >
@@ -49,6 +50,24 @@
                         </tr>                    
                     </table>
                 </template>       
+            </div>
+            <!--Fim do item-->
+
+            <!--Início do item-->
+            <div class="list" id="lista2">
+                <!-- template id="productrow" -->
+                    <table class="entire_section">
+                        <div class="div_presentation">  
+                            <p class="movie_specs">Titulo</p>
+                            <br><br>
+                            <p id="wanted">Relevância</p>   
+                            <p id="date" class="movie_specs">Data<p>
+                            <p id="season" class="movie_specs">Temporadas</p>
+                            <br><br>
+                            <p>Essa turminha da pesada irá embarcar em uma grande aventura.</p>
+                         </div>                                           
+                    </table>
+                <!-- /template -->       
             </div>
             <!--Fim do item-->
  

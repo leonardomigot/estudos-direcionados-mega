@@ -16,7 +16,7 @@ table:hover {
 }
 
 table tr th {
-    /*border: 1px solid black;*/
+    border: 1px solid black;
     text-align: left;
 }
 
@@ -36,11 +36,16 @@ table tr th {
     margin: 15px ;
 }
 
-#list {
+.list {
     margin: 0 15px 15px 15px;
     border: 1px solid silver;
     border-radius: 4px;
     flex-grow: 1;
+}
+
+#lista2 {
+    
+    background-color: silver;
 }
 
 .filmes {

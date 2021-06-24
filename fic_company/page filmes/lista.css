@@ -3,6 +3,7 @@
 #list {
     list-style: none;
     display: inline;
+    
 }
 
 /*#list table {
@@ -28,6 +29,12 @@
     font-size: 22px;
 }
 
+.identification {
+    color: silver;
+    font-size: 12px;
+    font-family: monospace;
+}
+
 #wanted {
     font-weight: bold;
     color: green;
@@ -37,6 +44,16 @@
 .movie_specs {
     color:gray;
     padding: 0 10px;
+}
+
+.div_presentation {
+    
+    margin: 30px;
+}
+
+.div_presentation p:first-child {
+    all: unset;
+    font-size: 28px;
 }
 
 
