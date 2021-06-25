@@ -1,33 +1,50 @@
+function createMainDbKey() {
+    localStorage.setItem('MAIN_DB', '[]');
+}
+//createMainDbKey();
+
 loadPageItems();
+
 
 document.getElementById("button").onclick = function() { // botao ADD
 
-    var last = localStorage.length;
     var titlev = prompt("Nome do filme");
-    var relevantv = prompt("Avaliação", "%");
+    var ratingv = prompt("Avaliação", "%");
     var datev = prompt("Data de lançamento", "Ano");
     var seasonsv = prompt("Qtd de Temporadas");
+
+    var temp = JSON.parse(localStorage.getItem("MAIN_DB"));
     
-    localStorage.setItem(
-        last,
-        '{"title":"' + titlev + '", ' +
-        '"rating":"' + relevantv + '", ' +
-        '"year":"' + datev + '", ' +
-        '"seasons":"' + seasonsv + '"}'
-    );
+    temp.push({
+        "title": titlev,
+        "rating": ratingv,
+        "date": datev,
+        "seasons": seasonsv
+    });    
+
+    temp = JSON.stringify(temp); 
+
+    localStorage.setItem('MAIN_DB', temp);
 
     loadPageItems();
 }
 
+
 document.getElementById("button2").onclick = function() { // botao DELETE
-    var deletev = prompt("Delete", "ID");
+   
+    var temp = JSON.parse(localStorage.getItem("MAIN_DB"));
 
-    for(var x=deletev; x<(localStorage.length-1); x++){
-        var nextItem = parseInt(x) + 1;
-        var temp = localStorage.getItem(nextItem); 
-        localStorage.setItem(x, temp);     } 
+    var numberOfItems = temp.length;
 
-    localStorage.removeItem(localStorage.length-1);
+    for(var x=numberOfItems - 1; x >= 0; x--){
+        if(document.getElementById(x).querySelector('.checkbox').checked === true){
+            temp.splice(x, 1);            
+        }
+    }   
+
+    temp = JSON.stringify(temp); 
+        
+    localStorage.setItem('MAIN_DB', temp);
 
     loadPageItems();
 }
@@ -36,44 +53,39 @@ function loadPageItems() {
     
     clearSpace();
 
-    var numberOfItems = localStorage.length;
+    var temp = JSON.parse(localStorage.getItem("MAIN_DB"));
 
+    var numberOfItems = temp.length;
+
+    console.log(numberOfItems);
+    
     for(var x=0; x < numberOfItems; x++){
 
-        createList(
+        createItem(
             x,
-            JSON.parse(localStorage[x])["title"],
-            JSON.parse(localStorage[x])["rating"],
-            JSON.parse(localStorage[x])["year"],
-            JSON.parse(localStorage[x])["seasons"]
-        );
-        
+            JSON.parse(localStorage["MAIN_DB"])[x]["title"],
+            JSON.parse(localStorage["MAIN_DB"])[x]["rating"],
+            JSON.parse(localStorage["MAIN_DB"])[x]["year"],
+            JSON.parse(localStorage["MAIN_DB"])[x]["seasons"]
+        );        
     }  
 }
 
 document.getElementById("click_div_vis").onclick = function() {
 
     var x = document.getElementById("lista1");
+    var y = document.getElementById("lista2");
 
     if (x.style.display === "none") {
         x.style.display = "block";
+        y.style.display = "none";
     } else {
         x.style.display = "none";
+        y.style.display = "block";
     }
 }
 
-document.getElementById("click_add_vis").onclick = function() { //toogle 
-
-    var x = document.getElementById("lista2");
-
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-
-function createList(id, title, rating, year, seasons) {
+function createItem(id, title, rating, year, seasons) {
     var template = document.getElementsByTagName("template")[0]; // Elemento template
     var clone = template.content.cloneNode(true);                // Clone do template
     
@@ -95,13 +107,11 @@ function createList(id, title, rating, year, seasons) {
     test = clone.querySelectorAll(".entire_section");    
     test[0].setAttribute("id", id);
 
+    test = clone.querySelectorAll(".checkbox");
+    test[0].setAttribute("id", id);
+
     document.getElementById("lista1").appendChild(clone);
     console.log("CRIADO: " + id);
-}
-
-function removeList(id) { // remover item x
-    document.getElementById(id).remove();
-    console.log("REMOVIDO: " + id); 
 }
 
 function clearSpace() { // remover todos os itens
@@ -114,5 +124,4 @@ function clearSpace() { // remover todos os itens
         elements[i].remove(); 
     }
 }
-
 

@@ -75,6 +75,7 @@ table tr th {
     font-size: 40px;
     border-radius: 4px;
     height: 50px;
+    margin-left: 10px; 
 }
 
 .botao:hover {
@@ -83,18 +84,27 @@ table tr th {
     
 }
 
-#button {    
+#button { 
+
+   
     width: 150px;   
     
 }
 
 #button2 {    
-    margin-right: 10px; 
+   
+
     width: 50px;
     font-size: 20px;
     font-weight: bold;
 }
 
+
+#button3 { 
+    width: 50px;
+    font-size: 14px;
+    font-weight: bold;
+}
 
 
 
