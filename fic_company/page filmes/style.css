@@ -16,7 +16,7 @@ table:hover {
 }
 
 table tr th {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     text-align: left;
 }
 
@@ -44,6 +44,7 @@ table tr th {
 }
 
 #lista2 {
+    display: none;
     
     background-color: silver;
 }
