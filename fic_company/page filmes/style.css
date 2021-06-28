@@ -43,6 +43,10 @@ table tr th {
     flex-grow: 1;
 }
 
+#lista1 {
+    overflow: scroll;
+}
+
 #lista2 {
     display: none;
     
@@ -100,10 +104,14 @@ table tr th {
 }
 
 
-#button3 { 
-    width: 50px;
-    font-size: 14px;
+
+
+.div_presentation * {
     font-weight: bold;
+}
+
+#wanted_expand {
+    color: green;
 }
 
 

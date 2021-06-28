@@ -24,9 +24,10 @@
     margin-right: 10px;
 }
 
-#movie_name {
+.movie_name {
     font-weight: bold;
     font-size: 22px;
+    cursor:pointer;
 }
 
 .identification {
@@ -55,6 +56,17 @@
     all: unset;
     font-size: 28px;
 }
+
+
+
+.edit_button {
+    display: flex; 
+    flex-direction: row; 
+    width: 300px; 
+    justify-content: flex-end;
+}
+
+
 
 
 

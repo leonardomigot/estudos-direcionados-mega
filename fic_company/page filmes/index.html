@@ -13,12 +13,11 @@
     <div id=container>
         <div id="menu">            
             <button class="filmes" id="click_filmes">home page</button>
-            <button class="filmes" id="click_div_vis">toogle div</button>
+            <button class="filmes" id="click_back">back</button>
         </div>
 
         <div id="content">
             <div id="header">
-                <button class="botao" id="button3"><p>Edit</p></button>
                 <button class="botao" id="button2"><img src="./resources/delete.png" alt="" style="height: 25px; margin: 12px;"></button>
                 <button class="botao" id="button"><p>+</p></button>
                 
@@ -33,7 +32,10 @@
                                 <input type="checkbox" name="" class="checkbox">
                             </th>
                             <th>
-                                <p id="movie_name">Nome do Filme</p>
+                                <p class="movie_name">Nome do Filme </p>
+                            </th>
+                            <th class="edit_button">
+                                <button class="edit-button">Edit</button>
                             </th>
                         </tr>
                         <tr>
@@ -52,20 +54,18 @@
             <!--Fim do item-->
 
             <!--Início do item-->
-            <div class="list" id="lista2">
-                <!-- template id="productrow" -->
-                    <table class="entire_section">
-                        <div class="div_presentation">  
-                            <p class="movie_specs">Titulo</p>
-                            <br><br>
-                            <p id="wanted">Relevância</p>   
-                            <p id="date" class="movie_specs">Data<p>
-                            <p id="season" class="movie_specs">Temporadas</p>
-                            <br><br>
-                            <p>Essa turminha da pesada irá embarcar em uma grande aventura.</p>
-                         </div>                                           
-                    </table>
-                <!-- /template -->       
+            <div class="list" id="lista2">                
+                <table class="entire_section2">
+                    <div class="div_presentation">  
+                        <p id="movie_title_expand" class="movie_specs">Titulo</p>
+                        <br><br>
+                        <p id="wanted_expand">Relevância</p>   
+                        <p id="date_expand" class="movie_specs">Data<p>
+                        <p id="season_expand" class="movie_specs">Temporadas</p>
+                        <br><br>
+                        <p id="description_expand">Essa turminha da pesada irá embarcar em uma grande aventura.</p>
+                        </div>                                           
+                </table>                      
             </div>
             <!--Fim do item-->
  

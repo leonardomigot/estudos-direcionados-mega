@@ -1,9 +1,18 @@
 function createMainDbKey() {
     localStorage.setItem('MAIN_DB', '[]');
 }
+
+function populateDb(){
+    localStorage.setItem('MAIN_DB', '[{"title":"Primeira guerra mundial","rating":"10","date":"1900","seasons":"1","description":"pow pow pow pow pow"},{"title":"segunda guerra mundial","rating":"50","date":"1939","seasons":"1","description":"kaboom pow pow ploft"},{"title":"Revolução francesa","rating":"50","date":"50","seasons":"50","description":"was the German invasion of France, Belgium"},{"title":"rambo","rating":"40","date":"56","seasons":"56","description":"silvestre stalone"}]');
+}
 //createMainDbKey();
 
 loadPageItems();
+
+document.getElementById("click_back").onclick = function() {
+    toogleDiv();
+  
+}
 
 
 document.getElementById("button").onclick = function() { // botao ADD
@@ -12,6 +21,7 @@ document.getElementById("button").onclick = function() { // botao ADD
     var ratingv = prompt("Avaliação", "%");
     var datev = prompt("Data de lançamento", "Ano");
     var seasonsv = prompt("Qtd de Temporadas");
+    var descriptionv = prompt("Descrição");
 
     var temp = JSON.parse(localStorage.getItem("MAIN_DB"));
     
@@ -19,7 +29,8 @@ document.getElementById("button").onclick = function() { // botao ADD
         "title": titlev,
         "rating": ratingv,
         "date": datev,
-        "seasons": seasonsv
+        "seasons": seasonsv,
+        "description" : descriptionv
     });    
 
     temp = JSON.stringify(temp); 
@@ -53,26 +64,20 @@ function loadPageItems() {
     
     clearSpace();
 
-    var temp = JSON.parse(localStorage.getItem("MAIN_DB"));
+    var filmes = JSON.parse(localStorage.getItem("MAIN_DB"));
 
-    var numberOfItems = temp.length;
-
-    console.log(numberOfItems);
-    
-    for(var x=0; x < numberOfItems; x++){
-
+    filmes.forEach((item, index) => {
         createItem(
-            x,
-            JSON.parse(localStorage["MAIN_DB"])[x]["title"],
-            JSON.parse(localStorage["MAIN_DB"])[x]["rating"],
-            JSON.parse(localStorage["MAIN_DB"])[x]["year"],
-            JSON.parse(localStorage["MAIN_DB"])[x]["seasons"]
-        );        
-    }  
+            index,
+            item.title,
+            item.rating,
+            item.year,
+            item.seasons
+        );
+    });    
 }
 
-document.getElementById("click_div_vis").onclick = function() {
-
+function toogleDiv() {
     var x = document.getElementById("lista1");
     var y = document.getElementById("lista2");
 
@@ -89,8 +94,16 @@ function createItem(id, title, rating, year, seasons) {
     var template = document.getElementsByTagName("template")[0]; // Elemento template
     var clone = template.content.cloneNode(true);                // Clone do template
     
-    var test = clone.querySelectorAll("#movie_name");    
+    var test = clone.querySelectorAll(".movie_name");    
     test[0].textContent = title;   
+
+    test = clone.querySelectorAll(".movie_name");
+    test[0].setAttribute("id", ("title-" + id));
+
+    test = clone.querySelectorAll(".edit-button");
+    test[0].setAttribute("id", id);
+
+    console.log(test);
 
     test = clone.querySelectorAll(".identification");
     test[0].textContent = id;
@@ -110,8 +123,46 @@ function createItem(id, title, rating, year, seasons) {
     test = clone.querySelectorAll(".checkbox");
     test[0].setAttribute("id", id);
 
+    clone.querySelector('.movie_name').addEventListener("click", e => {
+        TitleMovieHandler(e);
+    });
+
     document.getElementById("lista1").appendChild(clone);
-    console.log("CRIADO: " + id);
+
+    //console.log("CRIADO: " + id);
+}
+
+function TitleMovieHandler(evt){
+    const ID = evt.target.id.replace(/(\D)/g, '');
+    toogleDiv();
+    showItem(ID);
+}
+
+
+const original =  document.getElementById("lista2");
+console.log(original);
+
+
+function showItem(id) {
+
+    var dbTemp = JSON.parse(localStorage.getItem("MAIN_DB"));
+
+    var element;
+
+    element = document.querySelectorAll("#movie_title_expand");
+    element[0].textContent = dbTemp[id]["title"];
+
+    element = document.querySelectorAll("#wanted_expand");
+    element[0].textContent = dbTemp[id]["rating"] + "% Relevant";
+
+    element = document.querySelectorAll("#date_expand");
+    element[0].textContent = dbTemp[id]["date"];
+
+    element = document.querySelectorAll("#season_expand");
+    element[0].textContent = dbTemp[id]["seasons"] + " Temporadas";
+
+    element = document.querySelectorAll("#description_expand");
+    element[0].textContent = dbTemp[id]["description"];  
 }
 
 function clearSpace() { // remover todos os itens
@@ -123,5 +174,9 @@ function clearSpace() { // remover todos os itens
         console.log("excluido " + i);
         elements[i].remove(); 
     }
+
+
 }
+
+
 
