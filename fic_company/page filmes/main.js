@@ -1,3 +1,5 @@
+toogleDiv(1);
+
 function createMainDbKey() {
     localStorage.setItem('MAIN_DB', '[]');
 }
@@ -10,7 +12,7 @@ function populateDb(){
 loadPageItems();
 
 document.getElementById("click_back").onclick = function() {
-    toogleDiv();
+    toogleDiv(1);
   
 }
 
@@ -60,6 +62,8 @@ document.getElementById("button2").onclick = function() { // botao DELETE
     loadPageItems();
 }
 
+
+
 function loadPageItems() { 
     
     clearSpace();
@@ -77,16 +81,25 @@ function loadPageItems() {
     });    
 }
 
-function toogleDiv() {
+function toogleDiv(listNumber) {
     var x = document.getElementById("lista1");
     var y = document.getElementById("lista2");
+    var z = document.getElementById("lista3");
 
-    if (x.style.display === "none") {
+    if (listNumber === 1) {
         x.style.display = "block";
         y.style.display = "none";
-    } else {
+        z.style.display = "none";
+    } else if (listNumber === 2) {
         x.style.display = "none";
         y.style.display = "block";
+        z.style.display = "none";
+    } else if (listNumber === 3) {
+        x.style.display = "none";
+        y.style.display = "none";
+        z.style.display = "block";
+    } else {
+        console.log("Erro: Entrada inválida toogleDiv()")
     }
 }
 
@@ -127,21 +140,83 @@ function createItem(id, title, rating, year, seasons) {
         TitleMovieHandler(e);
     });
 
+    clone.querySelector('.edit_button').addEventListener("click", e=> {
+        itemEditHandler(e);
+    });
+
     document.getElementById("lista1").appendChild(clone);
 
-    //console.log("CRIADO: " + id);
+
 }
 
 function TitleMovieHandler(evt){
     const ID = evt.target.id.replace(/(\D)/g, '');
-    toogleDiv();
+    toogleDiv(2);
     showItem(ID);
 }
 
+function itemEditHandler(evt){
+    const ID = evt.target.id;
 
+    var dbTemp = JSON.parse(localStorage.getItem("MAIN_DB"));
+
+    //var element;
+
+    var titlev;
+    var ratingv;
+    var datev;
+    var seasonsv;
+    var descriptionv;
+
+    titlev = document.querySelectorAll("#movie_title_expand");
+    titlev[1].setAttribute("value", dbTemp[ID]["title"]);
+
+    ratingv = document.querySelectorAll("#wanted_expand");
+    ratingv[1].setAttribute("value", dbTemp[ID]["rating"]);
+
+    datev = document.querySelectorAll("#date_expand");
+    datev[1].setAttribute("value", dbTemp[ID]["date"]);
+
+    seasonsv = document.querySelectorAll("#season_expand");
+    seasonsv[1].setAttribute("value", dbTemp[ID]["seasons"]);
+
+    descriptionv = document.querySelectorAll("#description_expand");
+    descriptionv[1].setAttribute("value", dbTemp[ID]["description"]); 
+
+    document.getElementById("acceptModifications").onclick = function() {
+        titlev = document.querySelectorAll("#movie_title_expand")[1].value;
+        ratingv = document.querySelectorAll("#wanted_expand")[1].value;
+        datev = document.querySelectorAll("#date_expand")[1].value;
+        seasonsv = document.querySelectorAll("#season_expand")[1].value;
+        descriptionv = document.querySelectorAll("#description_expand")[1].value;
+
+        var temp = JSON.parse(localStorage.getItem("MAIN_DB"));
+    
+        temp.splice(ID, 1, {
+            "title": titlev,
+            "rating": ratingv,
+            "date": datev,
+            "seasons": seasonsv,
+            "description" : descriptionv
+        });    
+    
+        temp = JSON.stringify(temp); 
+    
+        localStorage.setItem('MAIN_DB', temp);
+        loadPageItems();
+        
+    }
+
+    
+    toogleDiv(3);
+
+
+}
+
+/*
 const original =  document.getElementById("lista2");
 console.log(original);
-
+*/
 
 function showItem(id) {
 
