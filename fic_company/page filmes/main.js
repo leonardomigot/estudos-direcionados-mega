@@ -7,15 +7,12 @@ function createMainDbKey() {
 function populateDb(){
     localStorage.setItem('MAIN_DB', '[{"title":"Primeira guerra mundial","rating":"10","date":"1900","seasons":"1","description":"pow pow pow pow pow"},{"title":"segunda guerra mundial","rating":"50","date":"1939","seasons":"1","description":"kaboom pow pow ploft"},{"title":"Revolução francesa","rating":"50","date":"50","seasons":"50","description":"was the German invasion of France, Belgium"},{"title":"rambo","rating":"40","date":"56","seasons":"56","description":"silvestre stalone"}]');
 }
-//createMainDbKey();
 
 loadPageItems();
 
 document.getElementById("click_back").onclick = function() {
-    toogleDiv(1);
-  
+    toogleDiv(1);  
 }
-
 
 document.getElementById("button").onclick = function() { // botao ADD
 
@@ -55,14 +52,10 @@ document.getElementById("button2").onclick = function() { // botao DELETE
         }
     }   
 
-    temp = JSON.stringify(temp); 
-        
+    temp = JSON.stringify(temp);         
     localStorage.setItem('MAIN_DB', temp);
-
     loadPageItems();
 }
-
-
 
 function loadPageItems() { 
     
@@ -145,8 +138,6 @@ function createItem(id, title, rating, year, seasons) {
     });
 
     document.getElementById("lista1").appendChild(clone);
-
-
 }
 
 function TitleMovieHandler(evt){
@@ -203,20 +194,11 @@ function itemEditHandler(evt){
         temp = JSON.stringify(temp); 
     
         localStorage.setItem('MAIN_DB', temp);
-        loadPageItems();
-        
-    }
-
-    
+        loadPageItems();   
+        toogleDiv(1);     
+    }    
     toogleDiv(3);
-
-
 }
-
-/*
-const original =  document.getElementById("lista2");
-console.log(original);
-*/
 
 function showItem(id) {
 
@@ -249,9 +231,4 @@ function clearSpace() { // remover todos os itens
         console.log("excluido " + i);
         elements[i].remove(); 
     }
-
-
 }
-
-
-

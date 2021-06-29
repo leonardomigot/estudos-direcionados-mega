@@ -12,8 +12,7 @@
 <body>
     <div id=container>
         <div id="menu">            
-            <button class="filmes" id="click_filmes">home page</button>
-            <button class="filmes" id="click_back">back</button>
+            <a href="#" class="filmes" id="click_filmes">Filmes</a>
         </div>
 
         <div id="content">
@@ -31,11 +30,11 @@
                             <th>
                                 <input type="checkbox" name="" class="checkbox">
                             </th>
-                            <th>
+                            <th class="title-th">
                                 <p class="movie_name">Nome do Filme </p>
                             </th>
                             <th class="edit_button">
-                                <button class="edit-button">Edit</button>
+                                <button class="edit-button edit-style">Edit</button>
                             </th>
                         </tr>
                         <tr>
@@ -64,7 +63,9 @@
                         <p id="season_expand" class="movie_specs">Temporadas</p>
                         <br><br>
                         <p id="description_expand">Essa turminha da pesada irá embarcar em uma grande aventura.</p>
-                        </div>                                           
+                        <br><br>
+                        <button class="edit-style" id="click_back">Back</button>
+                    </div>                                           
                 </table>                      
             </div>
             <!--Fim do item-->
@@ -73,21 +74,21 @@
             <div class="list" id="lista3">                
                 <table class="entire_section3">
                     <div class="div_presentation2">  
-                        <p>Titulo: &emsp; &emsp; &emsp; &emsp;</p>
+                        <p>Título______</p>
                         <input type="text" id="movie_title_expand">
                         <br>
-                        <p>Relevância: &emsp; &emsp; </p>
+                        <p>Relevância__</p>
                         <input type="text" id="wanted_expand">
                         <br>   
-                        <p>Data : &emsp; &emsp; &emsp; &emsp;<p>
+                        <p>Data________</p>
                         <input type="text" id="date_expand">
                         <br>
-                        <p>Temporadas: &emsp; &ensp; </p>
+                        <p>Temporadas__</p>
                         <input type="text" id="season_expand">
                         <br>
-                        <p>Descrição &emsp; &emsp; &ensp;</p>
+                        <p>Descrição___</p>
                         <input type="text" id="description_expand">
-                        <br><br>
+                        <br>
                         <button id="acceptModifications">ok</button>
                         </div>   
                                                                 

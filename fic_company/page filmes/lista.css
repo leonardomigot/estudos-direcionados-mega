@@ -16,7 +16,7 @@
 
 .entire_section {
     margin: 30px 30px 30px 30px;
-    padding-right: 30px;
+    /*padding-right: 30px;*/
     display: block;
 }
 
@@ -57,12 +57,10 @@
     font-size: 28px;
 }
 
-
-
 .edit_button {
     display: flex; 
     flex-direction: row; 
-    width: 300px; 
+    width: min-content;
     justify-content: flex-end;
 }
 
