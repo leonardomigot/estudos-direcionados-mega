@@ -1,12 +1,18 @@
 toogleDiv(1);
 
-function createMainDbKey() {
+/*function createMainDbKey() {
     localStorage.setItem('MAIN_DB', '[]');
 }
-
 function populateDb(){
     localStorage.setItem('MAIN_DB', '[{"title":"Primeira guerra mundial","rating":"10","date":"1900","seasons":"1","description":"pow pow pow pow pow"},{"title":"segunda guerra mundial","rating":"50","date":"1939","seasons":"1","description":"kaboom pow pow ploft"},{"title":"Revolução francesa","rating":"50","date":"50","seasons":"50","description":"was the German invasion of France, Belgium"},{"title":"rambo","rating":"40","date":"56","seasons":"56","description":"silvestre stalone"}]');
-}
+}*/
+
+var dbase = new Database("filmes");
+dbase.addEntry({
+    id : "01"
+});
+
+alert();
 
 loadPageItems();
 
