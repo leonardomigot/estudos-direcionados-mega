@@ -8,11 +8,35 @@ function populateDb(){
 }*/
 
 var dbase = new Database("filmes");
-dbase.addEntry({
-    id : "01"
+
+dbase.writeEntry({
+    id : "01",
+    test : "um"
 });
 
-alert();
+dbase.writeEntry({
+    id : "02",
+    test : "DD dois dois"
+});
+
+dbase.writeEntry({
+    id : "04",
+    test : "tres"
+});
+
+dbase.writeEntry({
+    id : "03",
+    test : "tres"
+});
+
+
+dbase.deleteEntry(02);
+
+
+
+
+
+
 
 loadPageItems();
 
