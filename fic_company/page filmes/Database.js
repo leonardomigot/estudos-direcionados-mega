@@ -41,7 +41,7 @@ function Database(scope) {
     deleteEntry: (id) => {
       _volatileStorage = _volatileStorage.filter(item => item.id != id);
       _persist();
-    }
+    } 
 
     //
 
